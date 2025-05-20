@@ -1,20 +1,33 @@
 import './App.css'
 import VideoList from "./components/VideoList.jsx";
+import React, {useEffect, useState} from "react";
+import {fetchVideos} from "./api/video.js";
 
 function App() {
 
-    const dummyVideos = [
-        { id: 1, title: 'サンプル動画 1' },
-        { id: 2, title: 'サンプル動画 2' },
-        { id: 3, title: 'サンプル動画 3' },
-    ];
+    const [videos, setVideos] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function load(){
+            const data = await fetchVideos();
+            setVideos(data);
+            setLoading(false);
+        }
+        load()
+    }, []);
 
     return (
-    <div style={{textAlign: 'center', marginTop: '2rem'}}>
-        <h1>Hello, Video! 🎬</h1>
-        <VideoList videos={dummyVideos}/>
-    </div>
-  )
+        <div style={{padding : '2rem'}}>
+            <h1>Video List</h1>
+
+            {loading ? (
+                <p>読み込み中・・・</p>
+            ) : (
+                <VideoList videos={videos}/>
+            )}
+        </div>
+    );
 }
 
 export default App
