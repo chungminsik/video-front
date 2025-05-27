@@ -1,0 +1,19 @@
+{
+  "page": {
+    "title": "Video Platform – Login",
+    "heading": "Video Platform"
+  },
+  "login": {
+    "title": "Login",
+    "email": {
+      "label": "Email Address",
+      "placeholder": "Enter your email"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password"
+    },
+    "button": "Log In",
+    "registerLink": "No account? Register here"
+  }
+}

@@ -1,32 +1,25 @@
 import './App.css'
-import VideoList from "./components/VideoList.jsx";
-import React, {useEffect, useState} from "react";
-import {fetchVideos} from "./api/video.js";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Login from "./components/Login.jsx";
+import Register from "./components/Register.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
+import Home from "./components/Home.jsx";
+
 
 function App() {
-
-    const [videos, setVideos] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        async function load(){
-            const data = await fetchVideos();
-            setVideos(data);
-            setLoading(false);
-        }
-        load()
-    }, []);
-
     return (
-        <div style={{padding : '2rem'}}>
-            <h1>Video List</h1>
+        <BrowserRouter>
+            <Routes>
+                {/*承認不要ルート*/}
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
 
-            {loading ? (
-                <p>読み込み中・・・</p>
-            ) : (
-                <VideoList videos={videos}/>
-            )}
-        </div>
+                {/*承認チェク付きルート*/}
+                <Route element={<PrivateRoute/>}>
+                    <Route path="/home" element={<Home/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 

@@ -1,0 +1,11 @@
+{
+  "page" : {
+    "title": "ログイン",
+    "heading": "動画プラットフォーム"
+  },
+  "login" : {
+    "email" : {
+      "label" : "email"
+    }
+  }
+}
