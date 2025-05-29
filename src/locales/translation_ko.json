@@ -1,20 +1,92 @@
-
 {
+  "language": {
+    "select": "언어 선택"
+  },
   "page": {
-    "title": "Video Platform – Login",
-    "heading": "Video Platform"
+    "title": "동영상 플랫폼",
+    "heading": "동영상 플랫폼"
   },
   "login": {
-    "title": "Login",
+    "title": "로그인",
     "email": {
-      "label": "Email Address",
-      "placeholder": "Enter your email"
+      "label": "이메일 주소",
+      "placeholder": "이메일 주소를 입력하세요"
     },
     "password": {
-      "label": "Password",
-      "placeholder": "Enter your password"
+      "label": "비밀번호",
+      "placeholder": "비밀번호를 입력하세요"
     },
-    "button": "Log In",
-    "registerLink": "No account? Register here"
+    "button": "로그인"
+  },
+  "register": {
+    "link": "계정이 없으신가요? (회원가입)",
+    "title": "회원가입",
+    "name": {
+      "label": "이름",
+      "placeholder": "이름을 입력하세요"
+    },
+    "email": {
+      "label": "이메일 주소",
+      "placeholder": "이메일 주소를 입력하세요"
+    },
+    "password": {
+      "label": "비밀번호",
+      "placeholder": "비밀번호를 입력하세요"
+    },
+    "button": "회원가입",
+    "login": {
+      "link": "이미 회원이신가요? 로그인하기"
+    }
+  },
+  "page.nav": {
+    "mypage": "마이페이지",
+    "logout": "로그아웃"
+  },
+  "video": {
+    "none": "🎬 현재 등록된 동영상이 없습니다.",
+    "unsupported": "이 브라우저는 동영상을 지원하지 않습니다.",
+    "like": {
+      "failed": "좋아요 실패!"
+    },
+    "server": {
+      "error": "서버 오류"
+    },
+    "list": "내 동영상",
+    "upload": {
+      "button": "동영상 업로드"
+    },
+    "none.title": "📭 아직 업로드한 동영상이 없습니다.",
+    "none.desc": "오른쪽 위 '동영상 업로드' 버튼을 눌러 동영상을 등록해보세요!"
+  },
+  "footer": {
+    "tagline": "즐겁고 따뜻한 영상 공유 플랫폼입니다!",
+    "rights": "행복을 전하는 플랫폼"
+  },
+  "nav": {
+    "logout": "로그아웃"
+  },
+  "greeting": "안녕하세요, {0}님!",
+  "upload": {
+    "modal": {
+      "title": "동영상 업로드"
+    },
+    "label": {
+      "file": "동영상 파일",
+      "title": "제목",
+      "description": "설명",
+      "thumbnail": "썸네일 이미지"
+    },
+    "submit": "업로드"
+  },
+  "edit": {
+    "modal": {
+      "title": "동영상 수정"
+    },
+    "label": {
+      "title": "제목",
+      "description": "설명",
+      "thumbnail": "썸네일 이미지"
+    },
+    "submit": "수정하기"
   }
 }

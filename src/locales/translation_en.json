@@ -1,19 +1,92 @@
 {
+  "language": {
+    "select": "Select Language"
+  },
   "page": {
-    "title": "Video Platform – Login",
+    "title": "Video Platform",
     "heading": "Video Platform"
   },
   "login": {
     "title": "Login",
     "email": {
       "label": "Email Address",
-      "placeholder": "Enter your email"
+      "placeholder": "Please enter your email address"
     },
     "password": {
       "label": "Password",
-      "placeholder": "Enter your password"
+      "placeholder": "Please enter your password"
     },
-    "button": "Log In",
-    "registerLink": "No account? Register here"
+    "button": "Login"
+  },
+  "register": {
+    "link": "Don't have an account? (Sign up)",
+    "title": "Register",
+    "name": {
+      "label": "Name",
+      "placeholder": "Please enter your name"
+    },
+    "email": {
+      "label": "Email Address",
+      "placeholder": "Please enter your email address"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Please enter your password"
+    },
+    "button": "Register",
+    "login": {
+      "link": "Already a member? Click here to login"
+    }
+  },
+  "page.nav": {
+    "mypage": "My Page",
+    "logout": "Logout"
+  },
+  "video": {
+    "none": "🎬 There are currently no uploaded videos.",
+    "unsupported": "Your browser does not support the video tag.",
+    "like": {
+      "failed": "Failed to like!"
+    },
+    "server": {
+      "error": "Server error"
+    },
+    "list": "My Videos",
+    "upload": {
+      "button": "Upload Video"
+    },
+    "none.title": "📭 No uploaded videos yet.",
+    "none.desc": "Try posting a video using the 'Upload Video' button!"
+  },
+  "footer": {
+    "tagline": "A warm and enjoyable video sharing platform!",
+    "rights": "A platform that delivers happiness"
+  },
+  "nav": {
+    "logout": "Logout"
+  },
+  "greeting": "Hello, {0}!",
+  "upload": {
+    "modal": {
+      "title": "Upload Video"
+    },
+    "label": {
+      "file": "Video File",
+      "title": "Title",
+      "description": "Description",
+      "thumbnail": "Thumbnail Image"
+    },
+    "submit": "Upload"
+  },
+  "edit": {
+    "modal": {
+      "title": "Edit Video"
+    },
+    "label": {
+      "title": "Title",
+      "description": "Description",
+      "thumbnail": "Thumbnail Image"
+    },
+    "submit": "Update"
   }
 }

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useTranslation } from 'react-i18next';
-import '/src/index.css';
 import {useNavigate} from "react-router-dom";
+import LocaleDropdown from './LocaleDropdown';
 
 export default function Login(){
 
@@ -16,17 +16,13 @@ export default function Login(){
         e.preventDefault();
 
         try{
-            const res = await fetch('/login', {
+            const res = await fetch('/api/auth/login', {
                 method: 'POST',
-                headers: {
-                    'Content-Type' : 'application/x-www-form-urlencoded',
-                },
+                headers: {'Content-Type' : 'application/json'},
                 credentials : 'include',
-                body: new URLSearchParams({
-                    username: email,
-                    password: password
-                })
+                body: JSON.stringify({ username: email, password })
             });
+
             if (res.ok){
                 navigate('/home');
             } else{
@@ -34,7 +30,7 @@ export default function Login(){
             }
         } catch (err){
             console.log(err);
-            setError('通信エラー0')
+            setError('通信エラー')
         }
     };
 
@@ -73,40 +69,14 @@ export default function Login(){
                     {error && <div className="alert alert-danger">{error}</div>}
                     <button type="submit" className="btn btn-primary w-100">{t('login.button')}</button>
                     <div className="text-center mt-3">
-                        <a href="/register" className="text-decosration-none">
+                        <a href="/register" className="text-decoration-none">
                             {t('register.link')}
                         </a>
                     </div>
                 </form>
             </div>
             <div style={{ position: 'fixed', bottom: 20, left: 20, zIndex: 1000}}>
-                <div className="dropdown d-inline-block">
-                    <button
-                        className="btn btn-outline-dark dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        言語選択
-                    </button>
-                    <ul className="dropdown-menu">
-                        <li>
-                            <a className="dropdown-item" href="?lang=ko">
-                                🇰🇷 한국어
-                            </a>
-                        </li>
-                        <li>
-                            <a className="dropdown-item" href="?lang=en">
-                                🇺🇸 English
-                            </a>
-                        </li>
-                        <li>
-                            <a className="dropdown-item" href="?lang=ja">
-                                🇯🇵 日本語
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <LocaleDropdown />
             </div>
         </div>
     );

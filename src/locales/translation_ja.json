@@ -1,11 +1,92 @@
 {
-  "page" : {
-    "title": "ログイン",
+  "language": {
+    "select": "言語を選択"
+  },
+  "page": {
+    "title": "動画プラットフォーム",
     "heading": "動画プラットフォーム"
   },
-  "login" : {
-    "email" : {
-      "label" : "email"
+  "login": {
+    "title": "ログイン",
+    "email": {
+      "label": "メールアドレス",
+      "placeholder": "メールアドレスを入力してください"
+    },
+    "password": {
+      "label": "パスワード",
+      "placeholder": "パスワードを入力してください"
+    },
+    "button": "ログイン"
+  },
+  "register": {
+    "link": "アカウントをお持ちでない方はこちら（会員登録）",
+    "title": "会員登録",
+    "name": {
+      "label": "名前",
+      "placeholder": "名前を入力してください"
+    },
+    "email": {
+      "label": "メールアドレス",
+      "placeholder": "メールアドレスを入力してください"
+    },
+    "password": {
+      "label": "パスワード",
+      "placeholder": "パスワードを入力してください"
+    },
+    "button": "登録",
+    "login": {
+      "link": "すでに会員ですか？ ログインはこちら"
     }
+  },
+  "page.nav": {
+    "mypage": "マイページ",
+    "logout": "ログアウト"
+  },
+  "video": {
+    "none": "🎬 現在、登録された動画がありません。",
+    "unsupported": "このブラウザは動画をサポートしていません。",
+    "like": {
+      "failed": "いいね失敗！"
+    },
+    "server": {
+      "error": "サーバーエラー"
+    },
+    "list": "マイ動画",
+    "upload": {
+      "button": "動画アップロード"
+    },
+    "none.title": "📭 まだアップロードした動画がありません。",
+    "none.desc": "右上の「動画アップロード」ボタンから動画を投稿してみましょう！"
+  },
+  "footer": {
+    "tagline": "楽しく暖かい映像共有プラットフォームです！",
+    "rights": "幸せを届けるプラットフォーム"
+  },
+  "nav": {
+    "logout": "ログアウト"
+  },
+  "greeting": "こんにちは、{0}さん！",
+  "upload": {
+    "modal": {
+      "title": "動画アップロード"
+    },
+    "label": {
+      "file": "動画ファイル",
+      "title": "タイトル",
+      "description": "説明",
+      "thumbnail": "サムネイル画像"
+    },
+    "submit": "アップロード"
+  },
+  "edit": {
+    "modal": {
+      "title": "動画編集"
+    },
+    "label": {
+      "title": "タイトル",
+      "description": "説明",
+      "thumbnail": "サムネイル画像"
+    },
+    "submit": "編集する"
   }
 }
